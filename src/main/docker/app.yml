@@ -9,13 +9,13 @@ services:
       - MANAGEMENT_PROMETHEUS_METRICS_EXPORT_ENABLED=true
       - SPRING_CLOUD_CONSUL_HOST=consul
       - SPRING_CLOUD_CONSUL_PORT=8500
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql:5432/ipaCatalogBookService
-      - SPRING_LIQUIBASE_URL=jdbc:postgresql://postgresql:5432/ipaCatalogBookService
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql:5432/ipaSystemDB
+      - SPRING_LIQUIBASE_URL=jdbc:postgresql://postgresql:5432/ipaSystemDB
       - JHIPSTER_CACHE_REDIS_SERVER=redis://redis:6379
       - JHIPSTER_CACHE_REDIS_CLUSTER=false
-      - SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_OIDC_ISSUER_URI=http://keycloak:9080/realms/jhipster
-      - SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_OIDC_CLIENT_ID=internal
-      - SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_OIDC_CLIENT_SECRET=internal
+      - SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_OIDC_ISSUER_URI=http://localhost:9080/realms/jhipster
+      - SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_OIDC_CLIENT_ID=web_app
+      - SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_OIDC_CLIENT_SECRET=web_app
     healthcheck:
       test:
         - CMD

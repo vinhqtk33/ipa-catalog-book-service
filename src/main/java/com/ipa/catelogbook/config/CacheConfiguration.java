@@ -71,6 +71,7 @@ public class CacheConfiguration {
     @Bean
     public JCacheManagerCustomizer cacheManagerCustomizer(javax.cache.configuration.Configuration<Object, Object> jcacheConfiguration) {
         return cm -> {
+            createCache(cm, com.ipa.catelogbook.domain.Book.class.getName(), jcacheConfiguration);
             // jhipster-needle-redis-add-entry
         };
     }
