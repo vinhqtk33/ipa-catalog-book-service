@@ -112,7 +112,7 @@ spring:
           enabled: false
   docker:
     compose:
-      enabled: true
+      enabled: false
       lifecycle-management: start-only
       file: src/main/docker/postgresql.yml
   profiles:
@@ -169,8 +169,8 @@ spring:
             issuer-uri: http://localhost:9080/realms/jhipster
         registration:
           oidc:
-            client-id: internal
-            client-secret: internal
+            client-id: web_app
+            client-secret: web_app
             scope: openid, profile, email, offline_access # last one for refresh tokens
   task:
     execution:
