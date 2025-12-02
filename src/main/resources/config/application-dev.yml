@@ -56,9 +56,9 @@ spring:
       port: 8500
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/ipaCatalogBookService
-    username: ipaCatalogBookService
-    password:
+    url: jdbc:postgresql://localhost:5432/ipaSystemDB
+    username: ipaSystem
+    password: ipasystem@123
     hikari:
       poolName: Hikari
       auto-commit: false

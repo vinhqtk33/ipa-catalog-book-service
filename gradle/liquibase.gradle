@@ -21,16 +21,16 @@ liquibase {
   activities {
     main {
       driver "org.postgresql.Driver"
-      url "jdbc:postgresql://localhost:5432/ipaCatalogBookService"
-      username "ipaCatalogBookService"
+      url "jdbc:postgresql://localhost:5432/ipaSystemDB"
+      username "ipaSystem"
       changelogFile "src/main/resources/config/liquibase/master.xml"
       logLevel "debug"
       classpath "src/main/resources/"
     }
     diffLog {
       driver "org.postgresql.Driver"
-      url "jdbc:postgresql://localhost:5432/ipaCatalogBookService"
-      username "ipaCatalogBookService"
+      url "jdbc:postgresql://localhost:5432/ipaSystemDB"
+      username "ipaSystem"
       changelogFile project.ext.diffChangelogFile
       referenceUrl "hibernate:spring:com.ipa.catelogbook.domain?dialect=org.hibernate.dialect.PostgreSQLDialect&hibernate.physical_naming_strategy=org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy&hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy"
       logLevel "debug"
